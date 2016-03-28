@@ -1,3 +1,23 @@
-//成人の人数を数える
+<!--https://paiza.jp/learning/word-count-->
 
-SELECT COUNT(age) FROM user_age WHERE age >= 20;
+
+<?php
+  $input = explode(' ', fgets(STDIN));
+  $result = array();
+  foreach ($input as $name){
+      //空白削除
+      $name = trim($name);
+
+     if (is_null($result[$name])) {
+       //配列に追加
+       $result[$name] = 1;
+     } elseif ($result[$name] >= 1) {
+       //カウントを増やす
+       $result[$name] += 1;
+     }
+  }
+  
+  foreach ($result as $key => $atom) {
+    echo $key. " ". $atom. "\n"; 
+  }
+?>
