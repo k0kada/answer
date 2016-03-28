@@ -1,24 +1,9 @@
-//https://paiza.jp/learning/sort-number
-
+//足し算問題
 
 <?php
-    $input_array = array();
-    while(true) {
-        $input = trim(fgets(STDIN));
-        if ($input === '')
-        {
-            break;
-        }
-        $input_array[] = (int) $input;
-    }
-
-    //数字の総数は削除
-    unset($input_array[0]);
-    //ソート
-    sort($input_array);
-
-    foreach ($input_array as $i => $num) {
-        echo $num ."\n";
-    }
-    echo "\n";
+  $input = explode(' ', fgets(STDIN));
+  $a = $input[0];
+  $b = $input[1];
+  
+  echo $a + $b;
 ?>
