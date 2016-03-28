@@ -1,9 +1,3 @@
-//足し算問題
+//成人の人数を数える
 
-<?php
-  $input = explode(' ', fgets(STDIN));
-  $a = $input[0];
-  $b = $input[1];
-  
-  echo $a + $b;
-?>
+SELECT COUNT(age) FROM user_age WHERE age >= 20;
