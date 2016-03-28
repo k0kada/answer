@@ -1,23 +1,17 @@
-<!--https://paiza.jp/learning/word-count-->
+<!--http://paiza.jp/challenges/practice-->
 
 
 <?php
-  $input = explode(' ', fgets(STDIN));
-  $result = array();
-  foreach ($input as $name){
-      //空白削除
-      $name = trim($name);
-
-     if (is_null($result[$name])) {
-       //配列に追加
-       $result[$name] = 1;
-     } elseif ($result[$name] >= 1) {
-       //カウントを増やす
-       $result[$name] += 1;
-     }
-  }
-  
-  foreach ($result as $key => $atom) {
-    echo $key. " ". $atom. "\n"; 
-  }
+$line_size = fgets(STDIN, 256);
+ 
+for( $i = 0; $i < $line_size ; $i++){
+    $year = fgets(STDIN, 256);
+    $year = rtrim($year);
+    //うるう年判定
+    if (($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0) {
+          echo $year." is a leap year\n";
+    } else {
+          echo $year." is not a leap year\n";
+    }
+}
 ?>
