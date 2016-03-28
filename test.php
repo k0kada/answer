@@ -1,3 +1,6 @@
+//https://paiza.jp/learning/sort-number
+
+
 <?php
     $input_array = array();
     while(true) {
@@ -9,12 +12,12 @@
         $input_array[] = (int) $input;
     }
 
-    //重複を削除
-    $sorted = array_unique($input_array, SORT_NUMERIC);
-    //昇順にソート
-    sort($sorted);
-    
-    foreach ($sorted as $i => $num) {
+    //数字の総数は削除
+    unset($input_array[0]);
+    //ソート
+    sort($input_array);
+
+    foreach ($input_array as $i => $num) {
         echo $num ."\n";
     }
     echo "\n";
