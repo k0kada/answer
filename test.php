@@ -1,4 +1,4 @@
-<!--https://paiza.jp/learning/word-count-->
+<!--https://paiza.jp/learning/long-table-->
 
 
 <?php
